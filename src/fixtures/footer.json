@@ -1,0 +1,71 @@
+[
+  {
+    "id": 1,
+    "title": "Audio Description",
+    "path": "/"
+  },
+  {
+    "id": 2,
+    "title": "Help Center",
+    "path": "/"
+  },
+  {
+    "id": 3,
+    "title": "Gift Cards",
+    "path": "/"
+  },
+  {
+    "id": 4,
+    "title": "Media Center",
+    "path": "/"
+  },
+  {
+    "id": 5,
+    "title": "Investor Relations",
+    "path": "/"
+  },
+  {
+    "id": 6,
+    "title": "Jobs",
+    "path": "/"
+  },
+  {
+    "id": 7,
+    "title": "Netflix Shop",
+    "path": "/"
+  },
+  {
+    "id": 8,
+    "title": "Terms of Use",
+    "path": "/"
+  },
+  {
+    "title": "Privacy",
+    "path": "/"
+  },
+  {
+    "id": 9,
+    "title": "Legal Notices",
+    "path": "/"
+  },
+  {
+    "id": 10,
+    "title": "Cookie Preferences",
+    "path": "/"
+  },
+  {
+    "id": 11,
+    "title": "Corporate Information",
+    "path": "/"
+  },
+  {
+    "id": 12,
+    "title": "Contact Us",
+    "path": "/"
+  },
+  {
+    "id": 13,
+    "title": "Do Not Sell or Share My Personal Information",
+    "path": "/"
+  }
+]
