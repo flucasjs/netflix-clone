@@ -16,7 +16,9 @@ const Inner = styled.div`
 const Item = styled.div`
   color: white;
   margin-bottom: 10px;
+  margin: auto;
   max-width: 670px;
+  width: 100%;
 
   &:first-of-type {
     margin-top: 3em;
@@ -57,6 +59,7 @@ const Body = styled.div`
   line-height: normal;
   background: #303030;
   padding: 0.8em 2.2em;
+  margin-bottom: 1px;
   white-space: pre-wrap;
   user-select: none;
 

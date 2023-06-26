@@ -24,7 +24,12 @@ Accordion.Title = function AccordionTitle({ children, ...restProps }) {
 };
 
 Accordion.Item = function AccordionItem({ children, ...restProps }) {
-  const toggleState = useToggle(false);
+  const [toggleShow, setToggleShow] = useToggle(false);
+
+  const toggleState = React.useMemo(
+    () => ({ toggleShow, setToggleShow }),
+    [toggleShow, setToggleShow],
+  );
 
   return (
     <ToggleContext.Provider value={toggleState}>
