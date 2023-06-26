@@ -1,9 +1,9 @@
-import React, { useState, createContext, useContext } from 'react';
+import React, { createContext, useContext } from 'react';
+import useToggle from '../../hooks/useToggle';
 import {
   Container,
   Inner,
   Title,
-  Frame,
   Item,
   Header,
   Body,
@@ -23,17 +23,8 @@ Accordion.Title = function AccordionTitle({ children, ...restProps }) {
   return <Title {...restProps}>{children}</Title>;
 };
 
-Accordion.Frame = function AccorionFrame({ children, ...restProps }) {
-  return <Frame {...restProps}>{children}</Frame>;
-};
-
 Accordion.Item = function AccordionItem({ children, ...restProps }) {
-  const [toggleShow, setToggleShow] = useState(false);
-
-  const toggleState = React.useMemo(
-    () => ({ toggleShow, setToggleShow }),
-    [toggleShow],
-  );
+  const toggleState = useToggle(false);
 
   return (
     <ToggleContext.Provider value={toggleState}>
@@ -43,16 +34,16 @@ Accordion.Item = function AccordionItem({ children, ...restProps }) {
 };
 
 Accordion.Header = function AccordionHeader({ children, ...restProps }) {
-  const { setToggleShow } = useContext(ToggleContext);
-
-  const toggle = React.useCallback(
-    () => setToggleShow((v) => !v),
-    [setToggleShow],
-  );
+  const { toggleShow, setToggleShow } = useContext(ToggleContext);
 
   return (
-    <Header onClick={toggle} {...restProps}>
+    <Header onClick={setToggleShow} {...restProps}>
       {children}
+      {toggleShow ? (
+        <img src="/images/icons/close-slim.png" alt="Close" />
+      ) : (
+        <img src="/images/icons/add.png" alt="Open" />
+      )}
     </Header>
   );
 };

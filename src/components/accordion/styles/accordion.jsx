@@ -16,17 +16,55 @@ const Inner = styled.div`
 const Item = styled.div`
   color: white;
   margin-bottom: 10px;
+  max-width: 670px;
 
   &:first-of-type {
     margin-top: 3em;
   }
 `;
 
-const Header = styled.div``;
+const Header = styled.div`
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  margin-bottom: 1px;
+  font-size: 26px;
+  font-weight: normal;
+  background: #303030;
+  padding: 0.8em 2.2em 0.8em 1.2em;
+  user-select: none;
+  align-items: center;
 
-const Body = styled.div``;
+  img {
+    filter: brightness(0) invert(1);
+    width: 24px;
 
-const Frame = styled.div``;
+    @media (max-width: 600px) {
+      width: 16px;
+    }
+  }
+
+  @media (max-width: 600px) {
+      font-size: 16px;
+    }
+`;
+
+const Body = styled.div`
+  max-height: 1200px;
+  transition: max-height 0.25s cubic-bezier(0.5, 0, 0.1, 1);
+  font-size: 26px;
+  font-weight: normal;
+  line-height: normal;
+  background: #303030;
+  padding: 0.8em 2.2em;
+  white-space: pre-wrap;
+  user-select: none;
+
+  @media (max-width: 600px) {
+    font-size: 16px;
+    line-height: 22px;
+  }
+`;
 
 const Title = styled.h1`
   font-size: 50px;
@@ -47,6 +85,5 @@ export {
   Item,
   Header,
   Body,
-  Frame,
   Title,
 };
