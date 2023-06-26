@@ -9,15 +9,13 @@ const Inner = styled.div`
   display: flex;
   padding: 70px 45px;
   flex-direction: column;
-  max-width: 815px;
   margin: auto;
+  max-width: calc( 66.66666666666666% - 6rem )
 `;
 
 const Item = styled.div`
   color: white;
-  margin-bottom: 10px;
-  margin: auto;
-  max-width: 670px;
+  margin: 0 0 0.5rem 0;
   width: 100%;
 
   &:first-of-type {
@@ -30,10 +28,10 @@ const Header = styled.div`
   justify-content: space-between;
   cursor: pointer;
   margin-bottom: 1px;
-  font-size: 26px;
+  font-size: 1.5rem;
   font-weight: normal;
   background: #303030;
-  padding: 0.8em 2.2em 0.8em 1.2em;
+  padding: 1.5rem;
   user-select: none;
   align-items: center;
 
@@ -52,16 +50,18 @@ const Header = styled.div`
 `;
 
 const Body = styled.div`
-  max-height: 1200px;
-  transition: max-height 0.25s cubic-bezier(0.5, 0, 0.1, 1);
+  max-height: ${({ toggleShow }) => (toggleShow ? '75rem' : '0')};
+  overflow: hidden;
+  visibility: ${({ toggleShow }) => (toggleShow ? 'visible' : 'collapse')};
+  transition: all 0.25s cubic-bezier(0.5, 0, 0.1, 1) 0s;
   font-size: 26px;
   font-weight: normal;
   line-height: normal;
   background: #303030;
-  padding: 0.8em 2.2em;
-  margin-bottom: 1px;
+  padding: ${({ toggleShow }) => (toggleShow ? '1.5rem' : '0 1.5rem')};
   white-space: pre-wrap;
   user-select: none;
+  text-align: left;
 
   @media (max-width: 600px) {
     font-size: 16px;
