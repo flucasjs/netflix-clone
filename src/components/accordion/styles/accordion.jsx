@@ -10,7 +10,7 @@ const Inner = styled.div`
   padding: 70px 45px;
   flex-direction: column;
   margin: auto;
-  max-width: calc( 66.66666666666666% - 6rem )
+  max-width: calc( 66.66666666666666% - 6rem );
 `;
 
 const Item = styled.div`

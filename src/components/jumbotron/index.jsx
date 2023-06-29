@@ -7,7 +7,7 @@ import {
   Title,
   Subtitle,
   Image,
-} from './styles/jumbotron';
+} from './styles/Jumbotron';
 
 function Jumbotron({ children, direction = 'row', ...restProps }) {
   return (

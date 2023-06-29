@@ -7,7 +7,7 @@ import {
   Item,
   Header,
   Body,
-} from './styles/accordion';
+} from './styles/Accordion';
 
 const ToggleContext = createContext(null);
 

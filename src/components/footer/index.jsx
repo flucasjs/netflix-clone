@@ -6,7 +6,7 @@ import {
   Link,
   Title,
   Text,
-} from './styles/footer';
+} from './styles/Footer';
 
 function Footer({ children, ...restProps }) {
   return <Container {...restProps}>{children}</Container>;

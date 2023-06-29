@@ -1,4 +1,4 @@
-export { default as Accordion } from './accordion';
-export { default as Footer } from './footer';
-export { default as Jumbotron } from './jumbotron';
-export { default as OptForm } from './opt-form';
+export { default as Accordion } from './Accordion';
+export { default as Footer } from './Footer';
+export { default as Jumbotron } from './Jumbotron';
+export { default as OptForm } from './OptForm';

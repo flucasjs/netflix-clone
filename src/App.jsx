@@ -1,17 +1,9 @@
 import React from 'react';
-import {
-  JumbotronContainer,
-  FooterContainer,
-  FaqsContainer,
-} from './containers';
+import { Home } from './pages';
 
 function App() {
   return (
-    <div>
-      <JumbotronContainer />
-      <FaqsContainer />
-      <FooterContainer />
-    </div>
+    <Home />
   );
 }
 

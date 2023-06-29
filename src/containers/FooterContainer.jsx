@@ -1,6 +1,6 @@
 import React from 'react';
-import { Footer } from '../components';
 import { footerData } from '../fixtures';
+import { Footer } from '../components';
 
 function FooterContainer() {
   return (
